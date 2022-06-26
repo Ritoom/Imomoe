@@ -1,12 +1,13 @@
 package com.skyd.imomoe.model.impls.custom
 
+import androidx.compose.runtime.NoLiveLiterals
 import com.skyd.imomoe.bean.TabBean
 import com.skyd.imomoe.model.interfaces.IHomeModel
 import com.skyd.imomoe.model.util.JsoupUtil
 import com.skyd.imomoe.util.eventbus.SelectHomeTabEvent
 import org.greenrobot.eventbus.EventBus
 import org.jsoup.select.Elements
-
+@NoLiveLiterals
 class CustomHomeModel : IHomeModel {
     override suspend fun getAllTabData(): ArrayList<TabBean> {
         return ArrayList<TabBean>().apply {

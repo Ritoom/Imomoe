@@ -55,32 +55,32 @@ class CustomRouter : IRouter {
                 RankActivityProcessor.route.route(context)
                 return true
             }
-            uriString.startsWith("/app${const.ANIME_CLASSIFY}") -> {     //如进入分类页面
-                val paramList = uriString.replace("/app${const.ANIME_CLASSIFY}", "")
-                    .replaceAfterLast("/","")
-                val param = paramList.substring(0,paramList.length-1)
-                if (param.isNotBlank()) {
-                    ClassifyActivityProcessor.route.buildRouteUri {
-                        appendQueryParameter("partUrl", param)
-                        appendQueryParameter("classifyTabTitle", "")
-                        appendQueryParameter("classifyTitle", param)
-                    }
-                } else "跳转协议格式错误".showToast()
-                return true
-            }
-            uriString.startsWith(const.ANIME_CLASSIFY) -> {     //如进入分类页面
-                val paramList = uriString.replace(const.ANIME_CLASSIFY, "")
-                    .replaceAfterLast("/","")
-                val param = paramList.substring(0,paramList.length-1)
-                if (param.isNotBlank()) {
-                    ClassifyActivityProcessor.route.buildRouteUri {
-                        appendQueryParameter("partUrl", param)
-                        appendQueryParameter("classifyTabTitle", "")
-                        appendQueryParameter("classifyTitle", param)
-                    }
-                } else "跳转协议格式错误".showToast()
-                return true
-            }
+//            uriString.startsWith("/app${const.ANIME_CLASSIFY}") -> {     //如进入分类页面
+//                val paramList = uriString.replace("/app${const.ANIME_CLASSIFY}", "")
+//                    .replaceAfterLast("/","")
+//                val param = paramList.substring(0,paramList.length-1)
+//                if (param.isNotBlank()) {
+//                    ClassifyActivityProcessor.route.buildRouteUri {
+//                        appendQueryParameter("partUrl", param)
+//                        appendQueryParameter("classifyTabTitle", "")
+//                        appendQueryParameter("classifyTitle", param)
+//                    }
+//                } else "跳转协议格式错误".showToast()
+//                return true
+//            }
+//            uriString.startsWith(const.ANIME_CLASSIFY) -> {     //如进入分类页面
+//                val paramList = uriString.replace(const.ANIME_CLASSIFY, "")
+//                    .replaceAfterLast("/","")
+//                val param = paramList.substring(0,paramList.length-1)
+//                if (param.isNotBlank()) {
+//                    ClassifyActivityProcessor.route.buildRouteUri {
+//                        appendQueryParameter("partUrl", param)
+//                        appendQueryParameter("classifyTabTitle", "")
+//                        appendQueryParameter("classifyTitle", param)
+//                    }
+//                } else "跳转协议格式错误".showToast()
+//                return true
+//            }
         }
         return false
     }

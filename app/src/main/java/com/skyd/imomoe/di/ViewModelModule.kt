@@ -2,6 +2,7 @@ package com.skyd.imomoe.di
 
 import com.skyd.imomoe.model.DataSourceManager
 import com.skyd.imomoe.model.impls.EverydayAnimeWidgetModel
+import com.skyd.imomoe.model.impls.MonthAnimeModel
 import com.skyd.imomoe.model.impls.Util
 import com.skyd.imomoe.model.impls.custom.*
 import com.skyd.imomoe.model.interfaces.*
@@ -51,7 +52,7 @@ object ViewModelModule {
 
     @Provides
     fun provideMonthAnimeModel(): IMonthAnimeModel {
-        return DataSourceManager.create(IMonthAnimeModel::class.java) ?: CustomMonthAnimeModel()
+        return DataSourceManager.create(IMonthAnimeModel::class.java) ?: MonthAnimeModel()
     }
 
     @Provides

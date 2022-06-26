@@ -1,8 +1,9 @@
 package com.skyd.imomoe.model.impls.custom
 
+import androidx.compose.runtime.NoLiveLiterals
 import com.skyd.imomoe.BuildConfig
 import com.skyd.imomoe.model.interfaces.IConst
-
+@NoLiveLiterals
 class CustomConst : IConst {
     companion object {
         val ANIME_RANK: String = "search"

@@ -1,10 +1,11 @@
 package com.skyd.imomoe.model.impls.custom
 
 import android.app.Activity
+import androidx.compose.runtime.NoLiveLiterals
 import com.skyd.imomoe.bean.*
 import com.skyd.imomoe.model.interfaces.IClassifyModel
 import com.skyd.imomoe.model.util.JsoupUtil
-
+@NoLiveLiterals
 class CustomClassifyModel : IClassifyModel {
     override suspend fun getClassifyData(partUrl: String): Pair<ArrayList<Any>, PageNumberBean?> {
         val const = CustomConst

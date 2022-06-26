@@ -1,5 +1,6 @@
 package com.skyd.imomoe.model.impls.custom
 
+import androidx.compose.runtime.NoLiveLiterals
 import com.skyd.imomoe.bean.AnimeCover3Bean
 import com.skyd.imomoe.bean.AnimeTypeBean
 import com.skyd.imomoe.bean.ImageBean
@@ -7,7 +8,7 @@ import com.skyd.imomoe.bean.PageNumberBean
 import com.skyd.imomoe.model.interfaces.ISearchModel
 import com.skyd.imomoe.model.util.JsoupUtil
 import com.skyd.imomoe.util.Util.toEncodedUrl
-
+@NoLiveLiterals
 class CustomSearchModel : ISearchModel {
     override suspend fun getSearchData(
         keyWord: String,

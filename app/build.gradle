@@ -224,7 +224,7 @@ task makeDex(type: Exec) {
 // 3.将dex和CustomInfo文件一起打入jar
 task makeJar(type: Jar) {
     //要打成的包的名字
-    baseName 'CustomDataSource'
+    baseName 'Hanime'
     //选取要打包的文件夹
     from(
             'build/dex/',

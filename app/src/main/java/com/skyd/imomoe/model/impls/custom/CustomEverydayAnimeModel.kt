@@ -1,11 +1,12 @@
 package com.skyd.imomoe.model.impls.custom
 
+import androidx.compose.runtime.NoLiveLiterals
 import com.skyd.imomoe.bean.*
 import com.skyd.imomoe.model.impls.custom.CustomConst
 import com.skyd.imomoe.model.interfaces.IEverydayAnimeModel
 import com.skyd.imomoe.model.util.JsoupUtil
 import java.time.LocalDateTime
-
+@NoLiveLiterals
 class CustomEverydayAnimeModel : IEverydayAnimeModel {
     override suspend fun getEverydayAnimeData(): Triple<ArrayList<TabBean>, ArrayList<List<Any>>, String> {
         val tabList = ArrayList<TabBean>()

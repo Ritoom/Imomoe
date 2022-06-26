@@ -2,11 +2,13 @@ package com.skyd.imomoe.model.impls.custom
 
 import android.os.Parcel
 import android.os.Parcelable
+import androidx.compose.runtime.NoLiveLiterals
 import com.skyd.imomoe.bean.*
 import com.skyd.imomoe.model.interfaces.IAnimeDetailModel
 import com.skyd.imomoe.model.util.JsoupUtil
 import org.jsoup.nodes.Element
 
+@NoLiveLiterals
 class CustomAnimeDetailModel : IAnimeDetailModel {
     override suspend fun getAnimeDetailData(
         partUrl: String

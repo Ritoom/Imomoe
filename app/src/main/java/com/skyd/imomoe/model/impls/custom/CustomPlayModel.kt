@@ -1,13 +1,14 @@
 package com.skyd.imomoe.model.impls.custom
 
 import android.app.Activity
+import androidx.compose.runtime.NoLiveLiterals
 import com.skyd.imomoe.bean.*
 import com.skyd.imomoe.model.interfaces.IPlayModel
 import com.skyd.imomoe.model.util.JsoupUtil
 import com.skyd.imomoe.util.showToast
 import org.jsoup.nodes.Element
 import java.lang.ref.SoftReference
-
+@NoLiveLiterals
 class CustomPlayModel : IPlayModel {
     private var mActivity: SoftReference<Activity>? = null
     override suspend fun getPlayData(

@@ -1,12 +1,13 @@
 package com.skyd.imomoe.model.impls.custom
 
+import androidx.compose.runtime.NoLiveLiterals
 import com.skyd.imomoe.bean.AnimeCover3Bean
 import com.skyd.imomoe.bean.AnimeTypeBean
 import com.skyd.imomoe.bean.ImageBean
 import com.skyd.imomoe.bean.PageNumberBean
 import com.skyd.imomoe.model.interfaces.IRankListModel
 import com.skyd.imomoe.model.util.JsoupUtil
-
+@NoLiveLiterals
 class CustomRankListModel : IRankListModel {
     var rankList: MutableList<Any> = ArrayList()
     var pageNumberBean: PageNumberBean? = null
