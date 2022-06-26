@@ -1,7 +1,9 @@
 package com.skyd.imomoe.di
 
 import com.skyd.imomoe.model.DataSourceManager
-import com.skyd.imomoe.model.impls.*
+import com.skyd.imomoe.model.impls.EverydayAnimeWidgetModel
+import com.skyd.imomoe.model.impls.Util
+import com.skyd.imomoe.model.impls.custom.*
 import com.skyd.imomoe.model.interfaces.*
 import dagger.Module
 import dagger.Provides
@@ -13,27 +15,27 @@ import dagger.hilt.android.components.ViewModelComponent
 object ViewModelModule {
     @Provides
     fun provideAnimeDetailModel(): IAnimeDetailModel {
-        return DataSourceManager.create(IAnimeDetailModel::class.java) ?: AnimeDetailModel()
+        return DataSourceManager.create(IAnimeDetailModel::class.java) ?: CustomAnimeDetailModel()
     }
 
     @Provides
     fun provideAnimeShowModel(): IAnimeShowModel {
-        return DataSourceManager.create(IAnimeShowModel::class.java) ?: AnimeShowModel()
+        return DataSourceManager.create(IAnimeShowModel::class.java) ?: CustomAnimeShowModel()
     }
 
     @Provides
     fun provideClassifyModel(): IClassifyModel {
-        return DataSourceManager.create(IClassifyModel::class.java) ?: ClassifyModel()
+        return DataSourceManager.create(IClassifyModel::class.java) ?: CustomClassifyModel()
     }
 
     @Provides
     fun provideConst(): IConst {
-        return DataSourceManager.getConst() ?: Const()
+        return DataSourceManager.getConst() ?: CustomConst()
     }
 
     @Provides
     fun provideEverydayAnimeModel(): IEverydayAnimeModel {
-        return DataSourceManager.create(IEverydayAnimeModel::class.java) ?: EverydayAnimeModel()
+        return DataSourceManager.create(IEverydayAnimeModel::class.java) ?: CustomEverydayAnimeModel()
     }
 
     @Provides
@@ -44,37 +46,37 @@ object ViewModelModule {
 
     @Provides
     fun provideHomeModel(): IHomeModel {
-        return DataSourceManager.create(IHomeModel::class.java) ?: HomeModel()
+        return DataSourceManager.create(IHomeModel::class.java) ?: CustomHomeModel()
     }
 
     @Provides
     fun provideMonthAnimeModel(): IMonthAnimeModel {
-        return DataSourceManager.create(IMonthAnimeModel::class.java) ?: MonthAnimeModel()
+        return DataSourceManager.create(IMonthAnimeModel::class.java) ?: CustomMonthAnimeModel()
     }
 
     @Provides
     fun providePlayModel(): IPlayModel {
-        return DataSourceManager.create(IPlayModel::class.java) ?: PlayModel()
+        return DataSourceManager.create(IPlayModel::class.java) ?: CustomPlayModel()
     }
 
     @Provides
     fun provideRankListModel(): IRankListModel {
-        return DataSourceManager.create(IRankListModel::class.java) ?: RankListModel()
+        return DataSourceManager.create(IRankListModel::class.java) ?: CustomRankListModel()
     }
 
     @Provides
     fun provideRankModel(): IRankModel {
-        return DataSourceManager.create(IRankModel::class.java) ?: RankModel()
+        return DataSourceManager.create(IRankModel::class.java) ?: CustomRankModel()
     }
 
     @Provides
     fun provideRouter(): IRouter {
-        return DataSourceManager.getRouter() ?: Router()
+        return DataSourceManager.getRouter() ?: CustomRouter()
     }
 
     @Provides
     fun provideSearchModel(): ISearchModel {
-        return DataSourceManager.create(ISearchModel::class.java) ?: SearchModel()
+        return DataSourceManager.create(ISearchModel::class.java) ?: CustomSearchModel()
     }
 
     @Provides

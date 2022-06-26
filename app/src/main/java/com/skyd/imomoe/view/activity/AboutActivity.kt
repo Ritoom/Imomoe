@@ -260,7 +260,7 @@ fun AboutScreenList(modifier: Modifier = Modifier) {
             MessageDialog(
                 title = stringResource(id = R.string.data_source_info),
                 message = (DataSourceManager.getConst()
-                    ?: com.skyd.imomoe.model.impls.Const()).run {
+                    ?: com.skyd.imomoe.model.impls.custom.CustomConst()).run {
                     "${
                         stringResource(
                             R.string.data_source_jar_version_name,

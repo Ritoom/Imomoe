@@ -40,9 +40,9 @@ abstract class BaseComponentActivity : ComponentActivity() {
         // 全屏
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
-        if (Util.lastReadUserNoticeVersion() >= Const.Common.USER_NOTICE_VERSION) {
-            initializeFlurry(application)
-        }
+//        if (Util.lastReadUserNoticeVersion() >= Const.Common.USER_NOTICE_VERSION) {
+//            initializeFlurry(application)
+//        }
     }
 
     fun setContentBase(content: @Composable () -> Unit) {

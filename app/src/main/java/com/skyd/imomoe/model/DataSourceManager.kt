@@ -130,6 +130,7 @@ object DataSourceManager {
     @Suppress("UNCHECKED_CAST")
     fun <T> create(clazz: Class<T>): T? {
         // 如果不使用自定义数据，直接返回null
+        return null
         if (dataSourceFileName == DEFAULT_DATA_SOURCE && !testMode) return null
         if (interfaceVersion != customDataSourceInfo?.get("interfaceVersion") &&
             !coexistentInterfaceVersions.contains(customDataSourceInfo?.get("interfaceVersion")) &&

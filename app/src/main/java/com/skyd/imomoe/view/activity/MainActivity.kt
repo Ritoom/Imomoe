@@ -57,7 +57,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), EventBusSubscriber {
                 onPositive = { _, _ ->
                     setReadUserNoticeVersion(Const.Common.USER_NOTICE_VERSION)
                     initData()
-                    initializeFlurry(application)
+//                    initializeFlurry(application)
                 },
                 negativeText = getString(R.string.disagree_and_exit),
                 onNegative = { _, _ -> finish() }

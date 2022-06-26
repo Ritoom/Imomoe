@@ -43,9 +43,9 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
         mBinding = getBinding()
         setContentView(mBinding.root)
 
-        if (Util.lastReadUserNoticeVersion() >= Const.Common.USER_NOTICE_VERSION) {
-            initializeFlurry(application)
-        }
+//        if (Util.lastReadUserNoticeVersion() >= Const.Common.USER_NOTICE_VERSION) {
+//            initializeFlurry(application)
+//        }
     }
 
     protected abstract fun getBinding(): VB

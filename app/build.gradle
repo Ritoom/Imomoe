@@ -14,9 +14,9 @@ android.defaultConfig {
     secret.shieldTextList.forEach({ k, v ->
         buildConfigField("String[]", k, v)
     })
-    secret.dataSource.forEach({ k, v ->
-        buildConfigField("String", k, "\"${v}\"")
-    })
+//    secret.dataSource.forEach({ k, v ->
+//        buildConfigField("String", k, "\"${v}\"")
+//    })
 }
 
 android {
@@ -53,6 +53,7 @@ android {
         vectorDrawables {
             useSupportLibrary true
         }
+        buildConfigField "String","MAIN_URL",'"https://hanime1.me"'
     }
 
     signingConfigs {
@@ -101,7 +102,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '11'
     }
 
     packagingOptions {
